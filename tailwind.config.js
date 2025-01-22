@@ -5,6 +5,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        // sourcesans: ['Source code Pro', 'sans-serif'],
+        // sans: ['Montserrat', 'sans-serif'],
+        // 'source-sans-pro': ['Source Sans Pro', 'sans-serif'],
+        // sans: ['Inter', 'sans-serif'],
+        // serif: ['Merriweather', 'serif'],
+        // 'source-code-pro': ['Source Code Pro', 'monospace'],
         poppins: ["Poppins", "sans-serif"],
       },
       colors: {

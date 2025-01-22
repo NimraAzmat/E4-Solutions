@@ -10,11 +10,11 @@ const Titlebar = () => {
   };
   return (
     <div className="bg-titlebg py-11 px-12 flex justify-between items-center ">
-      <h1 className="text-3xl font-bold text-navbg">E4 Solutions PVT Ltd.</h1>
-      <span className="text-3xl text-gray font-semibold">(555) 555-1234</span>
+      <h1 className="text-3xl font-bold text-navbg ml-24">E4 Solutions PVT Ltd.</h1>
+      <span className="text-xl text-gray font-semibold">Turning Vision into Reality</span>
       <div className="text-right">
         <span className="text-navbg text-m">Available Daily from 7am to 10pm</span>
-        <button onClick={handleSendMessage} className="primary-btn ml-4  text-white px-4 py-2 rounded shadow-md">
+        <button onClick={handleSendMessage} className="primary-btn ml-4 mr-12 text-white px-4 py-2 rounded shadow-md">
           CONTACT US
         </button>
       </div>

@@ -1,98 +1,70 @@
 import React from "react";
-import { FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { FaLocationDot, FaClock } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
+  const socialMediaLinks = [
+    { icon: FaFacebook, className: "text-navbg hover:text-white" },
+    { icon: TbWorldWww, className: "text-navbg hover:text-white" },
+    { icon: FaInstagram, className: "text-navbg hover:text-white" },
+  ];
+
+  const contactInfo = [
+    { icon: FaPhoneAlt, text: "(555) 555 - 1234" },
+    { icon: IoMdMail, text: "info@e4solutions.com" },
+    { icon: FaLocationDot, text: "456 Construction Ave, Boulder, CO" },
+    { icon: FaClock, text: "Available Daily: 7am - 10pm" },
+  ];
+
   return (
-    <footer className="py-28 bg-[#000000]">
+    <footer className="bg-black">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="container"
+        className="container mx-auto px-6 py-24 xl:px-12 2xl:px-36"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-30 md:gap-4">
-          {/* first section */}
-          <div className="space-y-5 max-w-[400px]">
-            <h1 className="text-4xl font-medium text-light">E4 Solutions</h1>
-            <p className="text-light">
+        <div className="grid grid-cols-1 pt-4 pl-8 md:grid-cols-2 gap-8 lg:grid-cols-2 lg:space-x-32">
+          {/* First Section */}
+          <div className="mb-6 max-w-[470px]">
+            <a href="/" className="mb-8 block text-2xl tracking-wider text-white">
+              E4 Solutions PVT Ltd.
+            </a>
+            <p className="text-left font-extralight tracking-wider text-white leading-6">
               At E4 Solutions, we create modern, professional websites and offer
               expert consultancy in construction, HVAC, electrification,
               elevators/escalators, construction supervision, and IT services,
               ensuring high-quality outcomes for our clients.
             </p>
-          </div>
-          {/* second section */}
-          <div className="grid grid-cols-2 gap-10">
-            <div className="space-y-2">
-              <h1 className="text-lg font-bold text-light">Contact Us</h1>
-              <p className="text-navbg">-----------------------------------</p>
-              <div className="text-light">
-                <ul className="space-y-2 text-base">
-                  <li className="cursor-pointer hover:font-medium duration-200">
-                    (555) 555 - 1234
-                  </li>
-                  <li className="cursor-pointer hover:font-medium duration-200">
-                    info@e4solutions.com
-                  </li>
-                  <li className="cursor-pointer hover:font-medium duration-200">
-                    456 Construction Ave, Boulder, CO
-                  </li>
-                  <li className="cursor-pointer hover:font-medium duration-200">
-                    Available Daily: 7am - 10pm
-                  </li>
-                </ul>
-              </div>
+            <div className="my-8 flex flex-row justify-center text-gray-400 md:justify-start">
+              {socialMediaLinks.map((link, index) => (
+                <div key={index} className="bg-white rounded-full p-2 mr-3">
+                  <link.icon className={link.className} />
+                </div>
+              ))}
             </div>
-            {/* <div className="space-y-4">
-              <h1 className="text-2xl font-bold">Links</h1>
-              <div className="text-light">
-                <ul className="space-y-2 text-lg">
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    Home
-                  </li>
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    Services
-                  </li>
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    About
-                  </li>
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    Contact
-                  </li>
-                </ul>
-              </div>
-            </div> */}
           </div>
-          {/* third section */}
-          {/* <div className="space-y-4 max-w-[300px]">
-            <h1 className="text-2xl font-bold">Get In Touch</h1>
-            <div className="flex items-center">
-              <input
-                type="text"
-                placeholder="Enter your email"
-                className="p-3 rounded-s-xl bg-white w-full py-4 focus:ring-0 focus:outline-none placeholder:text-light"
-              />
-              <button className="bg-primary text-white font-semibold py-4 px-6 rounded-e-xl">
-                Go
-              </button>
-            </div> */}
-          {/* social icons */}
-          {/* <div className="flex space-x-6 py-3">
-              <a href="https://chat.whatsapp.com/FQSKgJ5f1eIAhlyF5sVym0">
-                <FaWhatsapp className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
-              </a>
-              <a href="https://www.instagram.com/the.coding.journey/">
-                <FaInstagram className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
-              </a>
-              <a href="https://thecodingjourney.com/">
-                <TbWorldWww className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
-              </a>
-              <a href="https://www.youtube.com/@TheCodingJourney">
-                <FaYoutube className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
-              </a>
-            </div> */}
-          {/* </div> */}
+
+          {/* Second Section */}
+          <div className="space-y-4 text-white mb-4">
+            <div className="mb-6 border-b-2 border-navbg pb-4 text-xl tracking-wide text-white">
+              Contact Us
+            </div>
+            {contactInfo.map((info, index) => (
+              <div key={index} className="mb-1 flex items-center flex-row font-extralight tracking-wider text-white">
+                <info.icon className="text-navbg mr-2" />
+                <span>{info.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="pl-8">
+          <hr className="border-1 border-gray-700 w-full mt-8" />
+          <div className="mt-5 text-gray-700 text-xs">
+            &copy; 2025 E4 Solutions PVT Ltd. All Rights Reserved
+          </div>
         </div>
       </motion.div>
     </footer>

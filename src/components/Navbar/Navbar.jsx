@@ -16,7 +16,7 @@ const Navbar = () => {
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        className="py-3 bg-navbg text-white font-bold flex justify-between items-center"
+        className="py-3 bg-navbg text-white font-normal flex justify-between items-center"
       >
         {/* Menu section - Centered */}
         <div className="hidden lg:flex justify-center w-full">
@@ -27,7 +27,7 @@ const Navbar = () => {
                   href={menu.path}
                   className="inline-block py-2 px-3 hover:text-secondary relative group"
                 >
-                  <div className="w-2 h-2 bg-secondary absolute mt-4 rounded-full left-1/2 -translate-x-1/2 top-1/2 bottom-0 group-hover:block hidden"></div>
+                  <div className=" w-2 h-2 bg-secondary absolute mt-4 rounded-full left-1/2 -translate-x-1/2 top-1/2 bottom-0 group-hover:block hidden"></div>
                   {menu.title}
                 </a>
               </li>

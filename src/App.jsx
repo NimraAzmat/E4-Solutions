@@ -5,12 +5,13 @@ import Banner from "./components/Banner/Banner";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Banner2 from "./components/Banner/Banner2";
 import Footer from "./components/Footer/Footer";
-
+import Description from "./components/Description/Description";
 const App = () => {
   return (
     <main className="overflow-x-hidden bg-white text-dark">
       <Hero />
       <Services />
+      <Description/>
       <Banner />
       <Subscribe />
       <Banner2 />

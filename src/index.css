@@ -13,6 +13,9 @@
     filter: drop-shadow(6px 8px 10px rgba(0, 0, 0, 0.5));
   }
 }
+/* body {
+  font-family: 'Poppins';
+} */
 .carousel-indicator {
   margin-left: 3px;
   margin-right: 3px;
